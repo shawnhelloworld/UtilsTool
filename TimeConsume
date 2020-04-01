@@ -1,0 +1,5 @@
+auto start = chrono::steady_clock::now();
+//Function Body
+auto end = chrono::steady_clock::now();
+chrono::duration<double, std::milli> elapsed = end - start;
+cout << "time spent:" << elapsed.count() << "ms" << endl;
