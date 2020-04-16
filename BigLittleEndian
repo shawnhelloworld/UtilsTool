@@ -1,0 +1,15 @@
+  int i = 0x1234;
+	char* c = reinterpret_cast<char *>(&i);
+	//OR 
+	//char *c = (char *)(&i);
+	//Case1:
+	cout << c[0] - '\0' << endl;
+	cout << c[1] - '\0' << endl;
+	
+	
+	//Case2:
+  char t = c[0];
+	auto littleEnd = [& ](char c)->bool {
+		return (c == t); 
+	};
+	cout << "LitteEnd>>>>" << littleEnd(t) << endl;
